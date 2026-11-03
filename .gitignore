@@ -1,0 +1,19 @@
+node_modules/
+.DS_Store
+*.log
+
+# backend runtime data
+server/data/
+server/.env
+server/.vapid.json
+
+# next
+web/.next/
+web/out/
+web/.env.local
+
+# build artifacts
+*.tsbuildinfo
+
+# macOS
+.DS_Store
