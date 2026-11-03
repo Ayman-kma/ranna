@@ -26,6 +26,11 @@ self.addEventListener("push", (event) => {
     body: data.body || "",
     icon: "/icon-192.png",
     badge: "/icon-192.png",
+    // Web Push has NO supported custom-sound field. The sound is decided by the
+    // Android notification channel for this app (Settings → Apps → رنّة →
+    // Notifications → the channel → Sound). `silent: false` just asks for that
+    // channel's configured sound.
+    silent: false,
     vibrate: [200, 100, 200, 100, 400],
     tag: "ranna-order-" + (data.orderNumber || "update"),
     renotify: true,
