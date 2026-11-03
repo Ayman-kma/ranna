@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-family: "Cairo", "Tajawal", system-ui, -apple-system, "Segoe UI", Tahoma,
+    Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes ranna-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.65;
+  }
+  100% {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+}
+
+.animate-ranna-ring {
+  animation: ranna-ring 1.5s ease-out infinite;
+}
+
+@keyframes ranna-pop {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-ranna-pop {
+  animation: ranna-pop 0.35s ease-out both;
+}
+
+@keyframes ranna-shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-9deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  60% {
+    transform: rotate(-6deg);
+  }
+  80% {
+    transform: rotate(6deg);
+  }
+}
+
+.animate-ranna-shake {
+  animation: ranna-shake 1.1s ease-in-out infinite;
+  transform-origin: 50% 10%;
+}
+
+@keyframes ranna-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-ranna-float {
+  animation: ranna-float 2.4s ease-in-out infinite;
+}
